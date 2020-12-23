@@ -1,0 +1,15 @@
+{
+    "name": "indigo-starter-template",
+    "version": "0.0.1",
+    "description": "Scripts to run on a prod EC2 instance.",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "@indigo-ag/indigo-scripts": "latest"
+    }
+  }
