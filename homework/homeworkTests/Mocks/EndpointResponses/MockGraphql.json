@@ -1,0 +1,66 @@
+{
+    "data": {
+        "driver": {
+            "__typename": "Driver",
+            "loads": {
+                "__typename": "TruckingTripResponse",
+                "trips": [
+                    {
+                        "__typename": "TruckingTrip",
+                        "id": "o8GWEiDXNP",
+                        "deliveryStatus": "DELIVERED",
+                        "progress": "PENDING",
+                        "deliveredAt": "2020-10-16T12:00:00.000Z",
+                        "scheduledDeliveryOn": "2020-07-08",
+                        "truckingOrder": {
+                            "__typename": "TruckingOrder",
+                            "id": "rt0AfPlrq2",
+                            "tripDistanceMiles": 79.6,
+                            "orderType": "RICE",
+                            "locationFrom": {
+                                "__typename": "TruckingLocation",
+                                "id": "4IEYdsSPP",
+                                "phone": "870-588-6200",
+                                "address": {
+                                    "__typename": "Address",
+                                    "street": "110 SFC 632",
+                                    "street2": null,
+                                    "city": "Hughes",
+                                    "postalCode": "72348",
+                                    "state": "AR",
+                                    "country": "United States"
+                                },
+                                "name": "Lockley Brothers Farms",
+                                "coordinates": {
+                                    "__typename": "GeoPoint",
+                                    "latitude": 34.9774055,
+                                    "longitude": -90.43559259999999
+                                }
+                            },
+                            "locationTo": {
+                                "__typename": "TruckingLocation",
+                                "id": "tWt-g-eRQ1",
+                                "phone": "314-577-3544",
+                                "address": {
+                                    "__typename": "Address",
+                                    "street": "5752 U.S. 49",
+                                    "street2": null,
+                                    "city": "Jonesboro",
+                                    "postalCode": "72401",
+                                    "state": "AR",
+                                    "country": "USA"
+                                },
+                                "name": "Anheuser-Busch Sustainable Rice 164001 (Facility)",
+                                "coordinates": {
+                                    "__typename": "GeoPoint",
+                                    "latitude": 35.8743612,
+                                    "longitude": -90.5993299
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
