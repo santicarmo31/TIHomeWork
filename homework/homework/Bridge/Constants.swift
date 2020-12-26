@@ -10,5 +10,12 @@ import Foundation
 
 struct Constants {
 
-    static var apiURL = URL(string: "https://api.indigoag.build/graphql")!
+    static var apiURL = URL(string: "https://api.indigoag.build/graphql/")!
+    static let authorizationHeader = "Authorization"
+    static let tripIDFormat = "Trip ID %@"
+    static let tripDistanceFormat = "Distance %.1f"
+    static let startLocationTitle = "Start Location"
+    static let endLocationTitle = "End Location"
+    static let sortTripsTitle = "Sort Trips"
+    static let sortTripsMessage = "please select an option"
 }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol Authenticable {
+    func getToken(then completion: @escaping((Result<Token, Error>) -> Void))
+}
+
 final class AuthenticationAdapter: InitInjectable {
     struct Dependencies {
         var authSource: Auth = DemoAuthClient()
@@ -15,12 +19,12 @@ final class AuthenticationAdapter: InitInjectable {
     }
     internal var dependencies: Dependencies
 
-    init(dependencies: Dependencies) {
+    init(dependencies: Dependencies = .init()) {
         self.dependencies = dependencies
     }
 }
 
-extension AuthenticationAdapter {
+extension AuthenticationAdapter: Authenticable {
     func getToken(then completion: @escaping((Result<Token, Error>) -> Void)) {
         if let token = self.tokenStore.currentToken {
             completion(.success(token))
@@ -36,6 +40,6 @@ extension AuthenticationAdapter {
     }
 }
 
-enum AuthenticationTokenError: Error {
+enum AuthenticationTokenError: Error {
     case notFound
 }
