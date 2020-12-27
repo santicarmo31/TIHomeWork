@@ -64,12 +64,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ekq-je-JEl" kind="relationship" relationship="rootViewController" id="QBV-5A-KBl"/>
+                        <segue destination="Ekq-je-JEl" kind="relationship" relationship="rootViewController" id="Rs3-G5-Hcv"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFd-iZ-qGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.04347826086959" y="-196.20535714285714"/>
+            <point key="canvasLocation" x="-426" y="-196"/>
         </scene>
     </scenes>
     <resources>

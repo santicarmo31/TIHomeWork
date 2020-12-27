@@ -9,8 +9,7 @@
 import Foundation
 
 protocol ListTripsView: class {
-    func updateTrips(_ trips: [TruckingTrip])
-    func endRefreshing()
+    func updateTrips(_ trips: [TruckingTrip])    
     func errorGettingTrips(_ error: Error)
 }
 
@@ -31,16 +30,16 @@ enum SortTrip: CaseIterable {
 
 class ListTripsPresenter: InitInjectable {
     struct Dependencies {
-        var view: ListTripsView
-        var authenticationAdapter: Authenticable = MockAuthentication()
-        var networkClient: APINetworkClient = MockTripListNetwork()
-        var jsonLoader: JsonLoadable = Bundle.main
+        unowned var view: ListTripsView
+        var authenticationAdapter: Authenticable = AuthenticationAdapter()
+        var networkClient: APINetworkClient = NetworkClient()
+        var jsonLoader: JsonLoadable = Bundle.main        
     }
 
     var dependencies: Dependencies
     private var trips: [TruckingTrip] = [] {
         didSet {
-            self.view.updateTrips(self.trips)
+            dependencies.view.updateTrips(self.trips)
         }
     }
 
@@ -49,18 +48,9 @@ class ListTripsPresenter: InitInjectable {
     }
 
     func listTrips() {
-        getTrips { [weak self] (trips) in
+        getTrips { (trips) in
             DispatchQueue.main.async {
-                self?.trips = trips
-            }
-        }
-    }
-
-    func refreshTrips() {
-        getTrips { [weak self] (trips) in
-            DispatchQueue.main.async {
-                self?.trips = trips
-                self?.view.endRefreshing()
+                self.trips = trips
             }
         }
     }
@@ -79,13 +69,13 @@ class ListTripsPresenter: InitInjectable {
     }
 
     private func getTrips(then completion: @escaping(([TruckingTrip]) -> Void)) {
-        self.authenticationAdapter.getToken { [weak self] (tokenResult) in
+        dependencies.authenticationAdapter.getToken { (tokenResult) in
             switch tokenResult {
             case .success(let token):
-                self?.executeTripsRequest(token: token, then: completion)
+                self.executeTripsRequest(token: token, then: completion)
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self?.view.errorGettingTrips(error)
+                    self.dependencies.view.errorGettingTrips(error)
                 }
                 completion([])
             }
@@ -93,8 +83,8 @@ class ListTripsPresenter: InitInjectable {
     }
 
     private func executeTripsRequest(token: Token, then completion: @escaping(([TruckingTrip]) -> Void)) {
-        let bodyRequest = self.jsonLoader.loadJson(named: "request_body")
-        self.networkClient.executeRequest(
+        let bodyRequest = dependencies.jsonLoader.loadJson(named: "request_body")
+        dependencies.networkClient.executeRequest(
             Endpoint<DriverData>(
                 Constants.apiURL.absoluteString,
                 params: bodyRequest,
@@ -107,7 +97,7 @@ class ListTripsPresenter: InitInjectable {
                 completion(data.driver.loads.trips)
             case .failure(let error):
                 DispatchQueue.main.async {
-                    self.view.errorGettingTrips(error)
+                    self.dependencies.view.errorGettingTrips(error)
                 }
                 completion([])
             }

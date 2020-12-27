@@ -25,6 +25,7 @@
 		459B69082594208000C0CB7E /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B69072594208000C0CB7E /* Driver.swift */; };
 		45A3221E25990B2A0061F180 /* MockTripListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3221D25990B2A0061F180 /* MockTripListNetwork.swift */; };
 		45A3222625990C420061F180 /* MockAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3222525990C420061F180 /* MockAuthentication.swift */; };
+		45A3222A2599207F0061F180 /* LocationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A322292599207F0061F180 /* LocationAdapter.swift */; };
 		45B3E11C2598ED4600920C2A /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3E11B2598ED4600920C2A /* MessageView.swift */; };
 		45B3E127259900F600920C2A /* ListTripsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3E126259900F600920C2A /* ListTripsPresenter.swift */; };
 		45B3E12E2599038900920C2A /* MapTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3E12D2599038900920C2A /* MapTripViewController.swift */; };
@@ -75,6 +76,7 @@
 		459B69072594208000C0CB7E /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		45A3221D25990B2A0061F180 /* MockTripListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTripListNetwork.swift; sourceTree = "<group>"; };
 		45A3222525990C420061F180 /* MockAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthentication.swift; sourceTree = "<group>"; };
+		45A322292599207F0061F180 /* LocationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdapter.swift; sourceTree = "<group>"; };
 		45B3E11B2598ED4600920C2A /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		45B3E126259900F600920C2A /* ListTripsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripsPresenter.swift; sourceTree = "<group>"; };
 		45B3E12D2599038900920C2A /* MapTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTripViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				45126F1C2594FFEE0074643F /* AuthenticationAdapter.swift */,
 				45126F702597AD590074643F /* TokenStoreAdapter.swift */,
+				45A322292599207F0061F180 /* LocationAdapter.swift */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				45B3E11C2598ED4600920C2A /* MessageView.swift in Sources */,
 				66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */,
 				45126F912597C6400074643F /* ListTripTableViewCell.swift in Sources */,
+				45A3222A2599207F0061F180 /* LocationAdapter.swift in Sources */,
 				459B69082594208000C0CB7E /* Driver.swift in Sources */,
 				45126F602597A84A0074643F /* Injectable.swift in Sources */,
 				66AB47ED243D15EB000508FB /* Auth.swift in Sources */,

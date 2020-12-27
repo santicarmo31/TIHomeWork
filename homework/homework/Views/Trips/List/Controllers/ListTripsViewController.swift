@@ -71,12 +71,13 @@ class ListTripsViewController: UIViewController {
         var snapshot = Snapshot()
         snapshot.appendSections([])
         dataSource.apply(snapshot, animatingDifferences: false)
+        indicator.startAnimating()
         presenter.listTrips()
     }
 
     private func makeDataSource() -> ListTripsDataSource {
-        let dataSource = ListTripsDataSource(tableView: tableView) { (tableView, indexPath, trip) -> UITableViewCell? in
-            return self.createTripCell(tableView, indexPath: indexPath, trip: trip)
+        let dataSource = ListTripsDataSource(tableView: tableView) { [weak self] (tableView, indexPath, trip) -> UITableViewCell? in
+            return self?.createTripCell(tableView, indexPath: indexPath, trip: trip)
         }
         return dataSource
     }
@@ -98,7 +99,7 @@ class ListTripsViewController: UIViewController {
     @IBAction private func refreshData(_ sender: Any) {
         indicator.startAnimating()
         messageView.isHidden = true
-        presenter.refreshTrips()
+        presenter.listTrips()
     }
 }
 
@@ -136,6 +137,7 @@ extension ListTripsViewController: ListTripsView {
     }
 
     func updateTrips(_ trips: [TruckingTrip]) {
+        indicator.stopAnimating()
         var snapshot = Snapshot()
         snapshot.appendSections([.trips])
         snapshot.appendItems(trips, toSection: .trips)

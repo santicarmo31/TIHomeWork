@@ -26,11 +26,11 @@ final class AuthenticationAdapter: InitInjectable {
 
 extension AuthenticationAdapter: Authenticable {
     func getToken(then completion: @escaping((Result<Token, Error>) -> Void)) {
-        if let token = self.tokenStore.currentToken {
+        if let token = dependencies.tokenStore.currentToken {
             completion(.success(token))
             return
         }
-        self.authSource.token { (token) in
+        dependencies.authSource.token { (token) in
             guard let token = token else {
                 completion(.failure(AuthenticationTokenError.notFound))
                 return
@@ -40,6 +40,13 @@ extension AuthenticationAdapter: Authenticable {
     }
 }
 
-enum AuthenticationTokenError: Error {
+enum AuthenticationTokenError: Error, LocalizedError {
     case notFound
+
+    var errorDescription: String? {
+        switch self {
+        case .notFound:
+            return "Authentication error"
+        }
+    }
 }

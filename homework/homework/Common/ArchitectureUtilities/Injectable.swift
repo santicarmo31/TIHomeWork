@@ -8,18 +8,10 @@
 
 import Foundation
 
-@dynamicMemberLookup
 protocol Injectable {
     associatedtype Dependencies
 
-    var dependencies: Dependencies { get mutating set }
-}
-
-extension Injectable {
-    subscript<T>(dynamicMember keyPath: WritableKeyPath<Dependencies, T>) -> T {
-        get { self[keyPath: (\Self.dependencies).appending(path: keyPath)] }
-        set { self[keyPath: (\Self.dependencies).appending(path: keyPath)] = newValue }
-    }
+    var dependencies: Dependencies { get set }
 }
 
 // Helper that makes easier inject dependencies to objects
