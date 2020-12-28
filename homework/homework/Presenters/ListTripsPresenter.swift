@@ -31,13 +31,13 @@ enum SortTrip: CaseIterable {
 class ListTripsPresenter: InitInjectable {
     struct Dependencies {
         unowned var view: ListTripsView
-        var authenticationAdapter: Authenticable = AuthenticationAdapter()
+        var authenticationAdapter: AuthenticationAdapter = .init()
         var networkClient: APINetworkClient = NetworkClient()
         var jsonLoader: JsonLoadable = Bundle.main        
     }
 
     var dependencies: Dependencies
-    private var trips: [TruckingTrip] = [] {
+    var trips: [TruckingTrip] = [] {
         didSet {
             dependencies.view.updateTrips(self.trips)
         }

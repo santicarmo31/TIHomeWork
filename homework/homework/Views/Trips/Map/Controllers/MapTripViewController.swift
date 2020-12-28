@@ -89,7 +89,7 @@ extension MapTripViewController: MKMapViewDelegate {
             return
         }
         
-        guard CLLocationManager.authorizationStatus() == .authorizedWhenInUse  else {
+        guard locationAdapter.authorizationStatus == .authorizedWhenInUse  else {
             let alert = UIAlertController(title: "Attention", message: "We need your location to display how far you are from the tapped location", preferredStyle: .alert)
             alert.addAction(.init(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
