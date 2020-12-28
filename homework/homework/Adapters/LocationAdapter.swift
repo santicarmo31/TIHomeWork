@@ -17,6 +17,9 @@ final class LocationAdapter: NSObject, InitInjectable {
     static let `default`: LocationAdapter = .init()
     var dependencies: Dependencies
     var updatedLocation: ((CLLocation) -> Void)?
+    var authorizationStatus: CLAuthorizationStatus {
+        return CLLocationManager.authorizationStatus()
+    }
 
     init(dependencies: Dependencies = .init()) {
         self.dependencies = dependencies

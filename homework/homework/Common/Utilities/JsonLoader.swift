@@ -35,7 +35,7 @@ extension Bundle: JsonLoadable {
 
     func loadJson(named: String) -> [String: Any] {
 
-        guard let data = self.loadJsonData(named: named), let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+        guard let data = loadJsonData(named: named), let jsonResult = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
             assertionFailure("Json file \(named) can't be serialized")
             return [:]
         }
