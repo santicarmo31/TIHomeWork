@@ -18,4 +18,7 @@ struct Constants {
     static let endLocationTitle = "End Location"
     static let sortTripsTitle = "Sort Trips"
     static let sortTripsMessage = "please select an option"
+    static let sortByIDTitle = "By ID"
+    static let sortByDistanceTitle = "By Distance"
+    static let sortByRandomTitle = "By Random"
 }

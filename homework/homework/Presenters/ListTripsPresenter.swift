@@ -19,11 +19,11 @@ enum SortTrip: CaseIterable {
     var title: String {
         switch self {
         case .byId:
-            return "By ID"
+            return Constants.sortByIDTitle
         case .byDistance:
-            return "By Distance"
+            return Constants.sortByDistanceTitle
         case .random:
-            return "Random"
+            return Constants.sortByRandomTitle
         }
     }
 }
