@@ -31,13 +31,21 @@ struct TruckingTripResponse: Codable {
     let trips: [TruckingTrip]
 }
 
-struct TruckingTrip: Codable {
+struct TruckingTrip: Codable, Hashable {
     let id: String
     let deliveryStatus: String
     let progress: String
     let deliveredAt: Date
     let scheduledDeliveryOn: Date
     let truckingOrder: TruckingOrder
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func ==(lhs: TruckingTrip, rhs: TruckingTrip) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 struct TruckingOrder: Codable {

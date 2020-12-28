@@ -8,7 +8,16 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum NetworkError: Error, LocalizedError {
     case malformedURLRequest
     case invalidStatusCode(String)
+
+    var errorDescription: String? {
+        switch self {
+        case .malformedURLRequest:
+            return "Request is malformed"
+        case .invalidStatusCode(let message):
+            return message
+        }
+    }
 }

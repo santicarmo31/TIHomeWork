@@ -13,13 +13,17 @@ protocol APINetworkClient {
     func executeRequest<Response: Codable>(_ endpoint: Endpoint<Response>, completion: @escaping((Result<Response, Error>) -> Void))
 }
 
-final class NetworkClient: APINetworkClient {
-    private let session: URLSession
+final class NetworkClient: APINetworkClient, InitInjectable {
+    struct Dependencies {
+        var session: URLSession = .shared
+    }
+
     private let requestsInProcessQueue = DispatchQueue(label: "requestsInProcess")
     private var requestsInProcess: [Int: AnyCancellable] = [:]
+    var dependencies: Dependencies
 
-    init(session: URLSession) {
-        self.session = session
+    init(dependencies: Dependencies = .init()) {
+        self.dependencies = dependencies
     }
 
     func executeRequest<Response: Codable>(_ endpoint: Endpoint<Response>, completion: @escaping((Result<Response, Error>) -> Void)) {
@@ -29,7 +33,7 @@ final class NetworkClient: APINetworkClient {
         }
 
         let id = urlRequest.hashValue
-        let request = self.session.dataTaskPublisher(for: urlRequest)
+        let request = dependencies.session.dataTaskPublisher(for: urlRequest)
             .tryMap {
                 guard $0.1.hasSuccessStatusCode else {
                     throw self.handleTaskError(data: $0.0, response: $0.1)
@@ -53,31 +57,12 @@ final class NetworkClient: APINetworkClient {
     }
 
     private func handleTaskError(data: Data, response: URLResponse) -> Error {
-        let error = data.decodeError()
         return NetworkError.invalidStatusCode(
             """
-            Status code: \(response.httpStatusCode)
-            error: \(error?.error ?? "N/A")
-            description: \(error?.errorDescription ?? "N/A")
+            Bad Request
+            Status code: \(response.httpStatusCode)            
             """
         )
-    }
-}
-
-struct DataError: Codable {
-    let error: String
-    let errorDescription: String
-
-    enum CodingKeys: String, CodingKey {
-        case error
-        case errorDescription = "error_description"
-    }
-}
-
-
-private extension Data {
-    func decodeError() -> DataError? {
-        try? JSONDecoder().decode(DataError.self, from: self)
     }
 }
 

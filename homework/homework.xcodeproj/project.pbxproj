@@ -14,12 +14,26 @@
 		45126F602597A84A0074643F /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45126F5F2597A84A0074643F /* Injectable.swift */; };
 		45126F692597A8C90074643F /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45126F682597A8C90074643F /* Token.swift */; };
 		45126F712597AD590074643F /* TokenStoreAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45126F702597AD590074643F /* TokenStoreAdapter.swift */; };
+		45126F7C2597B5480074643F /* ListTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45126F7B2597B5480074643F /* ListTripsViewController.swift */; };
+		45126F8A2597C5B10074643F /* Trip.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45126F892597C5B10074643F /* Trip.storyboard */; };
+		45126F912597C6400074643F /* ListTripTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45126F8F2597C6400074643F /* ListTripTableViewCell.swift */; };
 		459B68CF2593EEE700C0CB7E /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B68CE2593EEE700C0CB7E /* JsonLoader.swift */; };
 		459B68E02594159700C0CB7E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B68DF2594159700C0CB7E /* NetworkClient.swift */; };
 		459B68E725941B0900C0CB7E /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B68E625941B0900C0CB7E /* Endpoint.swift */; };
 		459B68F025941CBC00C0CB7E /* homeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B68EF25941CBC00C0CB7E /* homeworkTests.swift */; };
 		459B69032594201D00C0CB7E /* MockGraphql.json in Resources */ = {isa = PBXBuildFile; fileRef = 459B69022594201D00C0CB7E /* MockGraphql.json */; };
 		459B69082594208000C0CB7E /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459B69072594208000C0CB7E /* Driver.swift */; };
+		45A3221E25990B2A0061F180 /* MockTripListNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3221D25990B2A0061F180 /* MockTripListNetwork.swift */; };
+		45A3222625990C420061F180 /* MockAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A3222525990C420061F180 /* MockAuthentication.swift */; };
+		45A3222A2599207F0061F180 /* LocationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A322292599207F0061F180 /* LocationAdapter.swift */; };
+		45B3E11C2598ED4600920C2A /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3E11B2598ED4600920C2A /* MessageView.swift */; };
+		45B3E127259900F600920C2A /* ListTripsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3E126259900F600920C2A /* ListTripsPresenter.swift */; };
+		45B3E12E2599038900920C2A /* MapTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B3E12D2599038900920C2A /* MapTripViewController.swift */; };
+		45F2AC4F2597D089001CEDA5 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AC4E2597D089001CEDA5 /* Reusable.swift */; };
+		45F2AC582597F4D6001CEDA5 /* ListTripTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45F2AC572597F4D6001CEDA5 /* ListTripTableViewCell.xib */; };
+		45F2AC5C2597F61C001CEDA5 /* DateFormatter+ReadableDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AC5B2597F61C001CEDA5 /* DateFormatter+ReadableDate.swift */; };
+		45F2AC5F2597F8D9001CEDA5 /* MockGraphql.json in Resources */ = {isa = PBXBuildFile; fileRef = 459B69022594201D00C0CB7E /* MockGraphql.json */; };
+		45F2AC632597FA15001CEDA5 /* JsonDecoder+APIDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F2AC622597FA15001CEDA5 /* JsonDecoder+APIDates.swift */; };
 		66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AB47D7243D1570000508FB /* AppDelegate.swift */; };
 		66AB47E1243D1572000508FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AB47E0243D1572000508FB /* Assets.xcassets */; };
 		66AB47E4243D1572000508FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AB47E2243D1572000508FB /* LaunchScreen.storyboard */; };
@@ -49,6 +63,9 @@
 		45126F5F2597A84A0074643F /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		45126F682597A8C90074643F /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		45126F702597AD590074643F /* TokenStoreAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStoreAdapter.swift; sourceTree = "<group>"; };
+		45126F7B2597B5480074643F /* ListTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripsViewController.swift; sourceTree = "<group>"; };
+		45126F892597C5B10074643F /* Trip.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trip.storyboard; sourceTree = "<group>"; };
+		45126F8F2597C6400074643F /* ListTripTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripTableViewCell.swift; sourceTree = "<group>"; };
 		459B68CE2593EEE700C0CB7E /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		459B68DF2594159700C0CB7E /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		459B68E625941B0900C0CB7E /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -57,6 +74,16 @@
 		459B68F125941CBC00C0CB7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		459B69022594201D00C0CB7E /* MockGraphql.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockGraphql.json; sourceTree = "<group>"; };
 		459B69072594208000C0CB7E /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		45A3221D25990B2A0061F180 /* MockTripListNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTripListNetwork.swift; sourceTree = "<group>"; };
+		45A3222525990C420061F180 /* MockAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthentication.swift; sourceTree = "<group>"; };
+		45A322292599207F0061F180 /* LocationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAdapter.swift; sourceTree = "<group>"; };
+		45B3E11B2598ED4600920C2A /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		45B3E126259900F600920C2A /* ListTripsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTripsPresenter.swift; sourceTree = "<group>"; };
+		45B3E12D2599038900920C2A /* MapTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTripViewController.swift; sourceTree = "<group>"; };
+		45F2AC4E2597D089001CEDA5 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		45F2AC572597F4D6001CEDA5 /* ListTripTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTripTableViewCell.xib; sourceTree = "<group>"; };
+		45F2AC5B2597F61C001CEDA5 /* DateFormatter+ReadableDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+ReadableDate.swift"; sourceTree = "<group>"; };
+		45F2AC622597FA15001CEDA5 /* JsonDecoder+APIDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JsonDecoder+APIDates.swift"; sourceTree = "<group>"; };
 		66AB47D4243D1570000508FB /* homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AB47D7243D1570000508FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66AB47E0243D1572000508FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				45126F4625979D380074643F /* DateFormatter+APIDates.swift */,
+				45F2AC5B2597F61C001CEDA5 /* DateFormatter+ReadableDate.swift */,
+				45F2AC622597FA15001CEDA5 /* JsonDecoder+APIDates.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -109,15 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				45126F5F2597A84A0074643F /* Injectable.swift */,
+				45F2AC4E2597D089001CEDA5 /* Reusable.swift */,
 			);
 			path = ArchitectureUtilities;
-			sourceTree = "<group>";
-		};
-		45126F6E2597A9970074643F /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Adapters;
 			sourceTree = "<group>";
 		};
 		45126F6F2597A9B00074643F /* Adapters */ = {
@@ -125,8 +148,53 @@
 			children = (
 				45126F1C2594FFEE0074643F /* AuthenticationAdapter.swift */,
 				45126F702597AD590074643F /* TokenStoreAdapter.swift */,
+				45A322292599207F0061F180 /* LocationAdapter.swift */,
 			);
 			path = Adapters;
+			sourceTree = "<group>";
+		};
+		45126F822597B5650074643F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				45126F8D2597C5F10074643F /* Trips */,
+				45B3E11B2598ED4600920C2A /* MessageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		45126F872597C5920074643F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45126F7B2597B5480074643F /* ListTripsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		45126F882597C5990074643F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				45126F892597C5B10074643F /* Trip.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		45126F8D2597C5F10074643F /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				45B3E12C2599034E00920C2A /* Map */,
+				45B3E134259903E100920C2A /* List */,
+				45126F882597C5990074643F /* Storyboards */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
+		45126F8E2597C6100074643F /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				45126F8F2597C6400074643F /* ListTripTableViewCell.swift */,
+				45F2AC572597F4D6001CEDA5 /* ListTripTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		456B391D2594F669005E9F0D /* Common */ = {
@@ -134,7 +202,6 @@
 			children = (
 				45126F4525979D250074643F /* Extensions */,
 				459B68CD2593EEDA00C0CB7E /* Utilities */,
-				45126F6E2597A9970074643F /* Adapters */,
 				45126F672597A8970074643F /* ArchitectureUtilities */,
 				45126F662597A8860074643F /* Networking */,
 			);
@@ -184,6 +251,48 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		45A3221C25990B190061F180 /* TemporaryMocks */ = {
+			isa = PBXGroup;
+			children = (
+				45A3221D25990B2A0061F180 /* MockTripListNetwork.swift */,
+				45A3222525990C420061F180 /* MockAuthentication.swift */,
+			);
+			path = TemporaryMocks;
+			sourceTree = "<group>";
+		};
+		45B3E125259900D200920C2A /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				45B3E126259900F600920C2A /* ListTripsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		45B3E12C2599034E00920C2A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				45B3E133259903A100920C2A /* Controllers */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		45B3E133259903A100920C2A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45B3E12D2599038900920C2A /* MapTripViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		45B3E134259903E100920C2A /* List */ = {
+			isa = PBXGroup;
+			children = (
+				45126F8E2597C6100074643F /* TableViewCells */,
+				45126F872597C5920074643F /* Controllers */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		66AB47CB243D1570000508FB = {
 			isa = PBXGroup;
 			children = (
@@ -207,9 +316,12 @@
 		66AB47D6243D1570000508FB /* homework */ = {
 			isa = PBXGroup;
 			children = (
+				45A3221C25990B190061F180 /* TemporaryMocks */,
+				459B690B2594208500C0CB7E /* Models */,
+				45B3E125259900D200920C2A /* Presenters */,
+				45126F822597B5650074643F /* Views */,
 				45126F6F2597A9B00074643F /* Adapters */,
 				456B391D2594F669005E9F0D /* Common */,
-				459B690B2594208500C0CB7E /* Models */,
 				66AB47F2243D1B41000508FB /* Bridge */,
 				66AB47EB243D15DE000508FB /* Internal */,
 				66AB47D7243D1570000508FB /* AppDelegate.swift */,
@@ -347,6 +459,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66AB47E4243D1572000508FB /* LaunchScreen.storyboard in Resources */,
+				45126F8A2597C5B10074643F /* Trip.storyboard in Resources */,
+				45F2AC582597F4D6001CEDA5 /* ListTripTableViewCell.xib in Resources */,
+				45F2AC5F2597F8D9001CEDA5 /* MockGraphql.json in Resources */,
 				66AB47E1243D1572000508FB /* Assets.xcassets in Resources */,
 				40119F21245B7C0500D97CB3 /* request_body.json in Resources */,
 			);
@@ -409,18 +524,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F2AC4F2597D089001CEDA5 /* Reusable.swift in Sources */,
 				459B68E725941B0900C0CB7E /* Endpoint.swift in Sources */,
 				45126F712597AD590074643F /* TokenStoreAdapter.swift in Sources */,
 				66AB47EF243D1680000508FB /* DemoAuth.swift in Sources */,
+				45B3E11C2598ED4600920C2A /* MessageView.swift in Sources */,
 				66AB47D8243D1570000508FB /* AppDelegate.swift in Sources */,
+				45126F912597C6400074643F /* ListTripTableViewCell.swift in Sources */,
+				45A3222A2599207F0061F180 /* LocationAdapter.swift in Sources */,
 				459B69082594208000C0CB7E /* Driver.swift in Sources */,
 				45126F602597A84A0074643F /* Injectable.swift in Sources */,
 				66AB47ED243D15EB000508FB /* Auth.swift in Sources */,
 				66AB47F4243D1B57000508FB /* Constants.swift in Sources */,
+				45F2AC632597FA15001CEDA5 /* JsonDecoder+APIDates.swift in Sources */,
 				459B68CF2593EEE700C0CB7E /* JsonLoader.swift in Sources */,
+				45126F7C2597B5480074643F /* ListTripsViewController.swift in Sources */,
+				45A3221E25990B2A0061F180 /* MockTripListNetwork.swift in Sources */,
+				45B3E12E2599038900920C2A /* MapTripViewController.swift in Sources */,
 				45126F3D25979C460074643F /* NetworkError.swift in Sources */,
+				45B3E127259900F600920C2A /* ListTripsPresenter.swift in Sources */,
 				45126F1D2594FFEE0074643F /* AuthenticationAdapter.swift in Sources */,
+				45F2AC5C2597F61C001CEDA5 /* DateFormatter+ReadableDate.swift in Sources */,
 				459B68E02594159700C0CB7E /* NetworkClient.swift in Sources */,
+				45A3222625990C420061F180 /* MockAuthentication.swift in Sources */,
 				45126F692597A8C90074643F /* Token.swift in Sources */,
 				45126F4725979D380074643F /* DateFormatter+APIDates.swift in Sources */,
 			);
